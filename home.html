@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DesignLab - UX/UI Practice Platform</title>
+    <meta name="description" content="Interactive platform for practicing UX and UI design skills with real-time feedback">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3B82F6",
+                        secondary: "#1E40AF",
+                        accent: "#F59E0B",
+                        dark: "#1F2937",
+                        light: "#F9FAFB"
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-primary rounded-lg"></div>
+                    <span class="text-xl font-bold text-dark">DesignLab</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-primary transition-colors">Challenges</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition-colors">Templates</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition-colors">Resources</a>
+                    <a href="#" class="text-gray-600 hover:text-primary transition-colors">Community</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors">
+                        Get Started
+                    </button>
+                    <button class="md:hidden text-gray-600">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-bold text-dark mb-6">
+                Master UX/UI Design
+                <span class="text-primary">Through Practice</span>
+            </h1>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Sharpen your design skills with interactive challenges, real-time feedback, and a community of fellow designers.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-secondary transition-colors font-semibold">
+                    Start Practicing
+                </button>
+                <button class="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:border-primary transition-colors font-semibold">
+                    View Challenges
+                </button>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div class="bg-white p-6 rounded-xl shadow-sm border">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <i class="fas fa-palette text-primary text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-dark mb-3">Design Challenges</h3>
+                <p class="text-gray-600">Daily and weekly challenges to practice specific UX/UI skills and techniques.</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm border">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                    <i class="fas fa-code text-green-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-dark mb-3">Interactive Prototyping</h3>
+                <p class="text-gray-600">Build and test interactive prototypes with our built-in design tools.</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm border">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                    <i class="fas fa-users text-purple-600 text-xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-dark mb-3">Community Feedback</h3>
+                <p class="text-gray-600">Get constructive feedback from experienced designers and peers.</p>
+            </div>
+        </section>
+
+        <!-- Design Challenge Section -->
+        <section class="bg-white rounded-xl shadow-sm border p-8 mb-16">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold text-dark">Today's Design Challenge</h2>
+                <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">Beginner</span>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-dark mb-4">Redesign a Login Form</h3>
+                    <p class="text-gray-600 mb-6">
+                        Create a modern, accessible login form that provides excellent user experience. Focus on clear visual hierarchy, intuitive interactions, and proper error handling.
+                    </p>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-clock text-gray-400"></i>
+                            <span class="text-gray-600">Estimated time: 45 minutes</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-trophy text-gray-400"></i>
+                            <span class="text-gray-600">125 designers completed</span>
+                        </div>
+                    </div>
+                    
+                    <button class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition-colors w-full">
+                        Start Challenge
+                    </button>
+                </div>
+                
+                <div class="bg-gray-100 rounded-lg p-6">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                            <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your email">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Password</label>
+                            <input type="password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Enter your password">
+                        </div>
+                        <button class="w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-900 transition-colors">
+                            Sign In
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UI Components Library -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-dark mb-8">UI Components Practice</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Button Components -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border">
+                    <h3 class="text-lg font-semibold text-dark mb-4">Buttons</h3>
+                    <div class="space-y-3">
+                        <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-secondary transition-colors">
+                        Primary Button
+                        </button>
+                        <button class="w-full border border-gray-300 text-gray-700 py-2 rounded-lg hover:border-primary transition-colors">
+                        Secondary Button
+                        </button>
+                        <button class="w-full bg-red-500 text-white py-2 rounded-lg hover:bg-red-600 transition-colors">
+                        Danger Button
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Form Components -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border">
+                    <h3 class="text-lg font-semibold text-dark mb-4">Form Elements</h3>
+                    <div class="space-y-3">
+                        <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Text input">
+                        <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <option>Select option</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                        </select>
+                        <div class="flex items-center">
+                            <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary">
+                            <label class="ml-2 text-sm text-gray-700">Checkbox</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card Components -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border">
+                    <h3 class="text-lg font-semibold text-dark mb-4">Cards</h3>
+                    <div class="bg-gray-50 p-4 rounded-lg border">
+                        <h4 class="font-semibold text-dark mb-2">Card Title</h4>
+                        <p class="text-sm text-gray-600 mb-3">This is a sample card component with proper spacing and typography.</h4>
+                        <button class="text-primary text-sm font-medium hover:text-secondary">
+                        Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Principles Section -->
+        <section class="bg-dark text-white rounded-xl p-8 mb-16">
+            <h2 class="text-2xl font-bold mb-6">Core UX/UI Principles</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-eye text-accent mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold mb-2">Visual Hierarchy</h3>
+                            <p class="text-gray-300 text-sm">Guide users through content with clear visual importance and organization.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-mouse-pointer text-accent mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold mb-2">Interaction Design</h3>
+                            <p class="text-gray-300 text-sm">Create intuitive and responsive interactions that feel natural to users.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-universal-access text-accent mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold mb-2">Accessibility</h3>
+                            <p class="text-gray-300 text-sm">Ensure your designs are usable by people with diverse abilities and disabilities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-3">
+                        <i class="fas fa-paint-brush text-accent mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold mb-2">Consistency</h3>
+                            <p class="text-gray-300 text-sm">Maintain consistent patterns and behaviors throughout your interface.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-primary rounded-lg"></div>
+                        <span class="text-xl font-bold">DesignLab</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Practice and master UX/UI design with interactive challenges and community feedback.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Design System</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">UI Patterns</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Color Tools</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Typography Guide</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Community</h3>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white transition-colors">Design Reviews</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Forums</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Mentorship</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 DesignLab. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Define application data
+        const designChallenges = [
+            {
+                "id": 1,
+                "title": "Redesign a Login Form",
+                "difficulty": "beginner",
+                "time": "45 minutes",
+                "completions": 125,
+                "description": "Create a modern, accessible login form with excellent user experience."
+            },
+            {
+                "id": 2,
+                "title": "Create a Dashboard Layout",
+                "difficulty": "intermediate",
+                "time": "90 minutes",
+                "completions": 89,
+                "description": "Design an intuitive dashboard with clear data visualization and navigation."
+            },
+            {
+                "id": 3,
+                "title": "Mobile App Onboarding",
+                "difficulty": "advanced",
+                "time": "120 minutes",
+                "completions": 42,
+                "description": "Design a seamless onboarding experience for a mobile application."
+            }
+        ];
+
+        const uiComponents = [
+            {
+                "category": "buttons",
+                "items": ["Primary", "Secondary", "Danger", "Outline", "Ghost"]
+            },
+            {
+                "category": "forms",
+                "items": ["Text Input", "Select", "Checkbox", "Radio", "Toggle"]
+            },
+            {
+                "category": "navigation",
+                "items": ["Navbar", "Sidebar", "Breadcrumbs", "Pagination", "Tabs"]
+            }
+        ];
+
+        // Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('a');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const href = this.getAttribute('href');
+                    
+                    if (href === '#') {
+                        // Handle internal navigation
+                        const targetSection = this.textContent.toLowerCase();
+                        console.log(`Navigating to: ${targetSection}`);
+                    
+                        // Show success message for demo purposes
+                        const message = document.createElement('div');
+                        message.className = 'fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg';
+                        message.textContent = `Navigating to ${this.textContent}`;
+                        document.body.appendChild(message);
+                        
+                        setTimeout(() => {
+                            document.body.removeChild(message);
+                        }, 2000);
+                    }
+                });
+            });
+
+            // Challenge buttons functionality
+            const challengeButtons = document.querySelectorAll('button');
+            challengeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (this.textContent.includes('Start Challenge') || this.textContent.includes('Start Practicing')) {
+                const message = document.createElement('div');
+                message.className = 'fixed top-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg';
+                message.textContent = 'Challenge started! Good luck!';
+                document.body.appendChild(message);
+                
+                setTimeout(() => {
+                    document.body.removeChild(message);
+                }, 3000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
