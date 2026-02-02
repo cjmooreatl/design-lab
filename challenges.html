@@ -140,6 +140,8 @@
                         // record click and update UI
                         localStorage.setItem(KEY, '1');
                         setClickedUI();
+
+                        fetch('/api/save-challenge', { method: 'POST', credentials: 'include' });
                     });
                     </script>
 
