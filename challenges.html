@@ -126,27 +126,34 @@
                         const clickCountElement = document.getElementById('clickCount');
                         const clickButton = document.getElementById('clickButton');
 
-                    function setClickedUI() {
-                        clickCountElement.textContent = '1';
-                        clickButton.disabled = true;
-                        clickButton.classList.add('opacity-50', 'cursor-not-allowed');
-                        clickButton.textContent = 'Saved';
+                    function updateUI() {
+                        const isSaved = localStorage.getItem(KEY) === '1';
+
+                        if (isSaved) {
+                            clickCountElement.textContent = '1';
+                            clickButton.disabled = false;
+                            clickButton.classList.add('opacity-50', 'cursor-not-allowed');
+                            clickButton.textContent = 'Saved (click to undsave)';
+                        } else {
+                            clickCountElement.textContent = '0';
+                            clickButton.disabled = false;
+                            clickButton.classList.remove('opacity-50', 'cursor-not-allowed');
+                            clickButton.textContent = 'Save Challenge';
+                        }
                     }
 
-                    // Initialize from storage
-                    if (localStorage.getItem(KEY) === '1') {
-                        setClickedUI();
-                    }
+                    updateUI();
 
                     clickButton.addEventListener('click', () => {
-                        // guard: no-op if already clicked
-                        if (localStorage.getItem(KEY) === '1') return;
-                        
-                        // record click and update UI
-                        localStorage.setItem(KEY, '1');
-                        setClickedUI();
+                        const isSaved = localStorage.getItem(KEY) === '1';
 
-                        fetch('/api/save-challenge', { method: 'POST', credentials: 'include' });
+                        if (isSaved) {
+                            localStorage.removeItem(KEY);
+                        } else {
+                            localStorage.setItem(KEY, '1');
+                        }
+
+                        updateUI();
                     });
                     </script>
 
