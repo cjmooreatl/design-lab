@@ -133,6 +133,11 @@
                         clickButton.textContent = 'Saved';
                     }
 
+                    // Initialize from storage
+                    if (localStorage.getItem(KEY) === '1') {
+                        setClickedUI();
+                    }
+
                     clickButton.addEventListener('click', () => {
                         // guard: no-op if already clicked
                         if (localStorage.getItem(KEY) === '1') return;
